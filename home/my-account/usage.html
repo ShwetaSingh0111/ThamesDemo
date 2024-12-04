@@ -23,7 +23,7 @@
 </head>
 <body>
 <div>
-   
+    
 
   </div>
   <!--
@@ -93,10 +93,26 @@
     }
     */
 //myFunctionSelect();
+
+const queryString = window.location.search;
+
+// Step 2: Create a URLSearchParams object
+const urlParams = new URLSearchParams(queryString);
+
+// Step 3: Retrieve parameters
+const userAccountNo = urlParams.get('contactAccountNumber'); // e.g., 'shirt'
+const headerMsg="Welcome "+userAccountNo;
+//const color = urlParams.get('color'); // e.g., 'blue'
+//const newUser = urlParams.get('newuser'); // e.g., ''
 </script>
-<h1>Welcome to Thames OAM Page</h1>
-<p>This is account related Page.</p>
-<a href="../home/oampage/oamsubpage">Go to OAM Subpage</a>
+
+<h1 id="header1"></h1>
+<script>
+    document.getElementById("header1").innerHTML=headerMsg;
+</script>
+
+<p>This Usages Page</p>
+<a href="../../home.html">Go to Home Page</a>
              
        
  
